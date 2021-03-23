@@ -21,6 +21,12 @@ public class Camera_Control : MonoBehaviour
         theta = 0.0f;       // xz angle of camera
         distance = initial_distance;   // radial distance of camera from (0, 0, 0) initial value
         x_change = 0.0f;    // no x_change on start
+        Vector3 pos_init;
+        pos_init.x = distance;
+        pos_init.y = 0;
+        pos_init.z = 0;
+        cam.transform.position = pos_init;
+        cam.transform.LookAt(Vector3.zero);
     }
 
     // Update is called once per frame
